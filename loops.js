@@ -1,22 +1,22 @@
 function forLoop(array){
   for (let i = 0; i < 25; i++) {
-    if (i === 1){
+    if (i === 1) {
       array = [...array, 'I am 1 strange loop.']
     }
-    else{
+    else {
       array = [...array, `I am ${i} strange loops.`]
     }
   }
+  return array
 }
 
 function whileLoop(number){
-  while (number > 0){
-    console.log(number--)
+  while (number > 0) {
+    console.log(--number)
   }
-  if (number === 0 ){
-    console.log("done")
-  }
+  return 'done'
 }
+
 
 function maybeTrue() {
   return Math.random() >= 0.5
@@ -24,6 +24,8 @@ function maybeTrue() {
 
 function doWhileLoop(array){
   do {
-    array.pop()
-  } while (maybeTrue())
+    array.pop();
+  }
+  while (array.length > 0 && maybeTrue())
+  return array;
 }
